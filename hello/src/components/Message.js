@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import BindingSamp from './BindingSamp';
-import '../css/navbar.css';
+import '../stylesheet/navbar.css';
 import Button from 'react-bootstrap/Button';
 import Quotes from './Quotes'
 import Skills from './Skills'
