@@ -1,9 +1,5 @@
 import React from 'react'
-let image1 = require("./images/download.jpg");
-let image2 = require("./images/quote1.jpg");
-let image3 = require("./images/quote2.jpg");
-let image4 = require("./images/quote3.jpg");
-let image5 = require("./images/quote4.jpg");
+
 
 /*{[
             

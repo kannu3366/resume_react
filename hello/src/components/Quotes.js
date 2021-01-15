@@ -16,19 +16,19 @@ function Quotes() {
 
                 <Carousel>
                     <Carousel.Item>
-                        <FlipItem content="2"/>
+                        <FlipItem content="1" imgPath="/images/quote1.jpg"/>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <FlipItem content="3"/>
+                        <FlipItem content="2" imgPath="/images/quote2.jpg"/>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <FlipItem content="4"/>
+                        <FlipItem content="3" imgPath="/images/quote3.jpg"/>
                     </Carousel.Item>
 
                     <Carousel.Item>
-                        <FlipItem content="5"/>
+                        <FlipItem content="4" imgPath="/images/quote4.jpg"/>
                     </Carousel.Item>
 
                 </Carousel>

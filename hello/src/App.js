@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import projectdata from './components/data/projects.json'
 import './App.css';
 import GreetAll from './components/GreetAll';
 import Message from './components/Message';
@@ -17,24 +16,24 @@ function App() {
   return (
     <div className="App">
 
-    <Message/> 
-    <Certificates/>
-     
-    <Projects/>
-    
+        <Message/> 
+        <Certificates/>
         
-     {/*
-     <BindingSamp/>
-     <FunctionClick/>
-     
-     
-     <GreetAll name ="Kanmani">
-      <h4>Have a good day</h4>
-     </GreetAll>
-     <GreetAll name="Venkat"/>
-     <WelcomeAll option="now"/>
-     */}
-     <Quotes/>
+        <Projects/>
+        
+            
+        {/*
+        <BindingSamp/>
+        <FunctionClick/>
+        
+        
+        <GreetAll name ="Kanmani">
+          <h4>Have a good day</h4>
+        </GreetAll>
+        <GreetAll name="Venkat"/>
+        <WelcomeAll option="now"/>
+        */}
+        <Quotes/>
       </div>
   );
 }

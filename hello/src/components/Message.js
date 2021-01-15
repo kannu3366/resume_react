@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import BindingSamp from './BindingSamp';
-import './css/navbar.css';
-import backpic from './images/backpic.jpg'
+import '../css/navbar.css';
 import Button from 'react-bootstrap/Button';
 import Quotes from './Quotes'
 import Skills from './Skills'
@@ -9,7 +8,7 @@ import Projects from './Projects'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
 
-
+let backpic='/images/backpic.jpg'
 
 class Message extends Component
 {

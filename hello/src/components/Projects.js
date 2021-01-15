@@ -2,7 +2,6 @@ import React from 'react'
 import Card from 'react-bootstrap/Card'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Cards from './Cards'
-import projectdata from './data/projects.json'
 import Button from 'react-bootstrap/Button'
 
 /*
