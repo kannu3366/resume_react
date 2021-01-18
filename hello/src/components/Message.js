@@ -7,6 +7,7 @@ import Skills from './Skills'
 import Projects from './Projects'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
+import {BrowserRouter as Router, Switch , Route } from 'react-router-dom'
 
 let backpic='/images/backpic.jpg'
 
@@ -17,9 +18,28 @@ class Message extends Component
     {
         super()
         this.state={
-            message: 'Hello All! Visiting here for the first time?'
+            message: 'Hello All! Visiting here for the first time?',
+            date: new Date()
         }
     }
+
+    tick()
+    {
+        this.setState({
+            date:new Date()
+        })
+
+    }
+
+    componentDidMount()
+    {
+        this.timerID= setInterval(()=>this.tick(),1000)
+    }
+    componentWillUnmount()
+    {
+        clearInterval(this.timerID)
+    }
+
 
     changeMessage()
     {
@@ -33,16 +53,18 @@ class Message extends Component
         return (
         <div>
              <div style={{backgroundImage:`url(${backpic})`}}>
-                <nav >
-                    
-                    <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Intro</h4></pre></a>
-                    <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Skills</h4></pre></a> 
-                    <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Projects</h4></pre></a>  
-                    <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Hobbies</h4></pre></a>  
-                    <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Contact</h4></pre></a>  
-                    
-                </nav>
+               
+                    <nav >
+                        
+                        <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Intro</h4></pre></a>
+                        <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Skills</h4></pre></a> 
+                        <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Projects</h4></pre></a>  
+                        <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Hobbies</h4></pre></a>  
+                        <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Contact</h4></pre></a>  
+                        
+                    </nav>
                 <br/>
+                <h6 >Time : {this.state.date.toLocaleTimeString()}</h6>
 
 
                 <h4>

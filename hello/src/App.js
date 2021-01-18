@@ -11,12 +11,15 @@ import Quotes from './components/Quotes';
 import Projects from './components/Projects';
 import Certificates from './components/Certificates';
 import Skills from './components/Skills';
+import ProjectFormInput from './components/ProjectFormInput';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-
-        <Message/> 
+      
+        
+        <Message/>
         <Certificates/>
         
         <Projects/>
@@ -34,6 +37,8 @@ function App() {
         <WelcomeAll option="now"/>
         */}
         <Quotes/>
+        <ProjectFormInput/>
+
       </div>
   );
 }
