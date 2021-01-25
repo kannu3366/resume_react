@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ProjectDataService from '../services/projects.service'
 
 export class ProjectFormInput extends Component {
     
@@ -6,26 +7,36 @@ export class ProjectFormInput extends Component {
         super(props)
     
         this.state = {
-             projName: '',
-             projDescription : '',
+             id:null,
+             projectName: '',
         }
     }
 
     onprojNameChanged=(event)=>{
         this.setState({
-            projName: event.target.value
+            projectName: event.target.value
         })
     }
 
 
-    onprojDescriptionChanged=(event)=>{
+    /*onprojDescriptionChanged=(event)=>{
         this.setState({
             projDescription: event.target.value
         })
-    }
+    }*/
 
     onSubmitForm=(event)=>{
-        alert(this.state.projName+'  '+this.state.projDescription)
+      var projectData = {
+        projectName : this.state.projectName
+      }
+      ProjectDataService.create(projectData).then(response =>{
+        console.log(response.projectData)
+      })
+      .catch(error=>{
+        console.log(error)
+      })
+
+      alert("submitted "+this.state.projectName)
 
         //event.preventDefault()
     }
@@ -35,6 +46,7 @@ export class ProjectFormInput extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmitForm}>
+                  <br/>
                     <label>Project Name : </label>
                     <input type="text" 
                     
@@ -45,7 +57,7 @@ export class ProjectFormInput extends Component {
                     />
                     <br/>
                     
-                    <label>Project Name : </label>
+                   {/* <label>Project Name : </label>
                     <textarea 
                     
                     value={this.state.projDescription}
@@ -53,6 +65,7 @@ export class ProjectFormInput extends Component {
                     onChange={this.onprojDescriptionChanged}
 
                     />
+                    */}
                     <br/>
                     <button type="submit">Submit</button>
 

@@ -2,12 +2,10 @@ import React,{Component} from 'react';
 import BindingSamp from './BindingSamp';
 import '../stylesheet/navbar.css';
 import Button from 'react-bootstrap/Button';
-import Quotes from './Quotes'
 import Skills from './Skills'
-import Projects from './Projects'
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container'
-import {BrowserRouter as Router, Switch , Route } from 'react-router-dom'
+//import Link from 'react-router-dom'
 
 let backpic='/images/backpic.jpg'
 
@@ -54,7 +52,7 @@ class Message extends Component
         <div>
              <div style={{backgroundImage:`url(${backpic})`}}>
                
-                    <nav >
+                   {/* <nav >
                         
                         <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Intro</h4></pre></a>
                         <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Skills</h4></pre></a> 
@@ -62,7 +60,7 @@ class Message extends Component
                         <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Hobbies</h4></pre></a>  
                         <a href = "#"><pre class="tab1"><h4 style={{color:"white"}}>Contact</h4></pre></a>  
                         
-                    </nav>
+                   </nav>*/}
                 <br/>
                 <h6 >Time : {this.state.date.toLocaleTimeString()}</h6>
 

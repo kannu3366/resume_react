@@ -13,19 +13,22 @@ import Certificates from './components/Certificates';
 import Skills from './components/Skills';
 import ProjectFormInput from './components/ProjectFormInput';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       
+        <Navbar/>
         
+        
+        
+            
+        {/*
         <Message/>
         <Certificates/>
         
         <Projects/>
-        
-            
-        {/*
         <BindingSamp/>
         <FunctionClick/>
         
@@ -35,9 +38,10 @@ function App() {
         </GreetAll>
         <GreetAll name="Venkat"/>
         <WelcomeAll option="now"/>
-        */}
-        <Quotes/>
+         <Quotes/>
         <ProjectFormInput/>
+        */}
+       
 
       </div>
   );
